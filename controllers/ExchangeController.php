@@ -4,9 +4,6 @@ namespace app\controllers;
 
 
 use app\common\components\currencyAPI\Handler;
-use Yii;
-use yii\base\InvalidConfigException;
-use yii\httpclient\Client;
 use yii\web\Controller;
 
 class ExchangeController extends Controller
@@ -19,9 +16,7 @@ class ExchangeController extends Controller
      */
     public function actionIndex()
     {
-        $result = Handler::getCurrencies();
-        var_dump($result);
-        return "hello";
+        return Handler::prepareResultString();
     }
 
 }
