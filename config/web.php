@@ -20,7 +20,7 @@ $config = [
         'cache' => [
             'class' => 'yii\redis\Cache',
             'redis' => [
-                'hostname' => 'redis.yarus',
+                'hostname' => 'redis.test',
                 'port' => 6379,
                 'database' => 0,
             ],

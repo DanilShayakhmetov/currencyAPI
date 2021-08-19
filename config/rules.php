@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'exchange/<cur:\w+>'                     => 'exchange/index',
+    '/'                     => 'exchange/index',
 ];

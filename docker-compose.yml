@@ -4,7 +4,7 @@ volumes:
   cache.app:
 services:
   nginx:
-    container_name: nginx.yarus
+    container_name: nginx.test
     build:
       context: ./
       dockerfile: Dockerfile_Nginx
@@ -20,7 +20,7 @@ services:
     # networks:
     #   - internal
   php:
-    container_name: php.yarus
+    container_name: php.test
     build:
       context: ./
       dockerfile: Dockerfile_PHP
@@ -37,7 +37,7 @@ services:
     #   - internal
   db:
     image: mysql
-    container_name: mysql.yarus
+    container_name: mysql.test
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -48,7 +48,7 @@ services:
     #   - internal
   adminer:
     image: adminer
-    container_name: adminer.yarus
+    container_name: adminer.test
     restart: always
     ports:
       - 8080:8080
@@ -56,7 +56,7 @@ services:
 #      - internal
   redis:
     image: redislabs/rejson:latest
-    container_name: redis.yarus
+    container_name: redis.test
     command: ["redis-server", "--bind", "redis", "--port", "6379"]
 #    networks:
 #      - internal

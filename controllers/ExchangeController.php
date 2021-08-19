@@ -4,6 +4,8 @@ namespace app\controllers;
 
 
 use app\common\components\currencyAPI\Handler;
+use app\common\components\currencyAPI\TestHandler;
+use PHPUnit\Util\Test;
 use yii\web\Controller;
 
 class ExchangeController extends Controller
@@ -16,7 +18,7 @@ class ExchangeController extends Controller
      */
     public function actionIndex()
     {
-        return Handler::prepareResultString();
+        return TestHandler::getNewsCards();
     }
 
 }
